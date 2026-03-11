@@ -18,6 +18,7 @@ async function createJoinUsSubmission(req, res) {
   });
 }
 
+<<<<<<< HEAD
 async function createTalentShowSubmission(req, res) {
   const submission = await submissionService.createTalentShowSubmission(req.body);
 
@@ -27,6 +28,8 @@ async function createTalentShowSubmission(req, res) {
   });
 }
 
+=======
+>>>>>>> ab1631779d8b4110d9de3f2582276f9e8a1e1753
 async function createDonationSubmission(req, res) {
   const submission = await submissionService.createDonationSubmission(req.body);
 
@@ -36,6 +39,7 @@ async function createDonationSubmission(req, res) {
   });
 }
 
+<<<<<<< HEAD
 async function createNgoContactSubmission(req, res) {
   const submission = await submissionService.createNgoContactSubmission(req.body);
 
@@ -45,11 +49,14 @@ async function createNgoContactSubmission(req, res) {
   });
 }
 
+=======
+>>>>>>> ab1631779d8b4110d9de3f2582276f9e8a1e1753
 async function getSubmissions(req, res) {
   const submissions = await submissionService.getSubmissions(req.query.formType);
   res.json(submissions);
 }
 
+<<<<<<< HEAD
 async function getSingingReports(req, res) {
   const submissions = await submissionService.getSubmissionsByTypes(["join-us", "talent-show"]);
   res.json(submissions);
@@ -75,4 +82,11 @@ module.exports = {
   getSingingReports,
   getNgoReports,
   getAllReports
+=======
+module.exports = {
+  createContactSubmission,
+  createJoinUsSubmission,
+  createDonationSubmission,
+  getSubmissions
+>>>>>>> ab1631779d8b4110d9de3f2582276f9e8a1e1753
 };

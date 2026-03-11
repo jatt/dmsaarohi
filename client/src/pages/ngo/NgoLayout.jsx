@@ -6,8 +6,12 @@ function NgoLayout() {
   const tabs = [
     { label: "Activities", to: "/ngo/activities" },
     { label: "Donation", to: "/ngo/donation" },
+<<<<<<< HEAD
     { label: "Image Gallery", to: "/ngo/gallery" },
     { label: "Contact", to: "/ngo/contact" }
+=======
+    { label: "Image Gallery", to: "/ngo/gallery" }
+>>>>>>> ab1631779d8b4110d9de3f2582276f9e8a1e1753
   ];
 
   return (

@@ -11,10 +11,13 @@ import NgoLayout from "./pages/ngo/NgoLayout";
 import NgoActivitiesPage from "./pages/ngo/NgoActivitiesPage";
 import NgoDonationPage from "./pages/ngo/NgoDonationPage";
 import NgoGalleryPage from "./pages/ngo/NgoGalleryPage";
+<<<<<<< HEAD
 import NgoContactPage from "./pages/ngo/NgoContactPage";
 import AdminPage from "./pages/admin/AdminPage";
 import AdminLoginPage from "./pages/admin/AdminLoginPage";
 import AdminGuard from "./pages/admin/AdminGuard";
+=======
+>>>>>>> ab1631779d8b4110d9de3f2582276f9e8a1e1753
 
 function App() {
   return (
@@ -36,12 +39,15 @@ function App() {
           <Route path="activities" element={<NgoActivitiesPage />} />
           <Route path="donation" element={<NgoDonationPage />} />
           <Route path="gallery" element={<NgoGalleryPage />} />
+<<<<<<< HEAD
           <Route path="contact" element={<NgoContactPage />} />
         </Route>
 
         <Route path="/admin/login" element={<AdminLoginPage />} />
         <Route path="/admin" element={<AdminGuard />}>
           <Route index element={<AdminPage />} />
+=======
+>>>>>>> ab1631779d8b4110d9de3f2582276f9e8a1e1753
         </Route>
       </Routes>
     </BrowserRouter>

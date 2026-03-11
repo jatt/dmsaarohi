@@ -16,6 +16,7 @@ function JoinUsForm({ onClose, onStatusChange, showClose = true }) {
 
     try {
       const payload = {
+<<<<<<< HEAD
         name: form.fullName,
         stageName: form.stageName,
         age: form.age,
@@ -27,6 +28,15 @@ function JoinUsForm({ onClose, onStatusChange, showClose = true }) {
         languagePreference: form.languagePreference,
         videoLink: form.videoLink,
         shortIntroduction: form.shortIntroduction
+=======
+        name: form.name,
+        age: form.age,
+        city: form.city,
+        phone: form.phone,
+        email: form.email,
+        interest: form.talentType,
+        message: form.shortBio
+>>>>>>> ab1631779d8b4110d9de3f2582276f9e8a1e1753
       };
 
       const result = await submitForm("/api/forms/join-us", payload);
@@ -62,6 +72,7 @@ function JoinUsForm({ onClose, onStatusChange, showClose = true }) {
 
       <form className="grid gap-4 md:grid-cols-2" onSubmit={handleSubmit}>
         <label className="grid gap-2 text-sm font-medium text-stone-100">
+<<<<<<< HEAD
           Full Name
           <input
             className={renderInputClassNames(true)}
@@ -69,10 +80,20 @@ function JoinUsForm({ onClose, onStatusChange, showClose = true }) {
             value={form.fullName}
             onChange={(event) => setForm({ ...form, fullName: event.target.value })}
             placeholder="Enter your full name"
+=======
+          Name
+          <input
+            className={renderInputClassNames(true)}
+            type="text"
+            value={form.name}
+            onChange={(event) => setForm({ ...form, name: event.target.value })}
+            placeholder="Enter your name"
+>>>>>>> ab1631779d8b4110d9de3f2582276f9e8a1e1753
             required
           />
         </label>
         <label className="grid gap-2 text-sm font-medium text-stone-100">
+<<<<<<< HEAD
           Stage Name (Optional)
           <input
             className={renderInputClassNames(true)}
@@ -83,6 +104,8 @@ function JoinUsForm({ onClose, onStatusChange, showClose = true }) {
           />
         </label>
         <label className="grid gap-2 text-sm font-medium text-stone-100">
+=======
+>>>>>>> ab1631779d8b4110d9de3f2582276f9e8a1e1753
           Age
           <input
             className={renderInputClassNames(true)}
@@ -95,6 +118,7 @@ function JoinUsForm({ onClose, onStatusChange, showClose = true }) {
           />
         </label>
         <label className="grid gap-2 text-sm font-medium text-stone-100">
+<<<<<<< HEAD
           Gender
           <select
             className={renderInputClassNames(true)}
@@ -109,6 +133,8 @@ function JoinUsForm({ onClose, onStatusChange, showClose = true }) {
           </select>
         </label>
         <label className="grid gap-2 text-sm font-medium text-stone-100">
+=======
+>>>>>>> ab1631779d8b4110d9de3f2582276f9e8a1e1753
           City
           <input
             className={renderInputClassNames(true)}
@@ -142,6 +168,7 @@ function JoinUsForm({ onClose, onStatusChange, showClose = true }) {
           />
         </label>
         <label className="grid gap-2 text-sm font-medium text-stone-100">
+<<<<<<< HEAD
           Talent Category
           <select
             className={renderInputClassNames(true)}
@@ -186,6 +213,25 @@ function JoinUsForm({ onClose, onStatusChange, showClose = true }) {
             value={form.shortIntroduction}
             onChange={(event) => setForm({ ...form, shortIntroduction: event.target.value })}
             placeholder="Tell us about your musical journey, achievements, and goals"
+=======
+          Talent Type
+          <select
+            className={renderInputClassNames(true)}
+            value={form.talentType}
+            onChange={(event) => setForm({ ...form, talentType: event.target.value })}
+          >
+            <option>Singer</option>
+            <option>Musician</option>
+          </select>
+        </label>
+        <label className="grid gap-2 text-sm font-medium text-stone-100 md:col-span-2">
+          Short Bio
+          <textarea
+            className={`${renderInputClassNames(true)} min-h-32`}
+            value={form.shortBio}
+            onChange={(event) => setForm({ ...form, shortBio: event.target.value })}
+            placeholder="Write a short bio"
+>>>>>>> ab1631779d8b4110d9de3f2582276f9e8a1e1753
             required
           />
         </label>

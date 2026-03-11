@@ -22,6 +22,7 @@ function HeroSection() {
 
         <div className="flex flex-wrap items-center gap-3">
           <a
+<<<<<<< HEAD
             className="music-pulse rounded-full bg-gradient-to-r from-orange-700 to-amber-500 px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5"
             href="#contact"
           >
@@ -32,15 +33,31 @@ function HeroSection() {
             href="#about"
           >
             Learn More
+=======
+            className="rounded-full bg-orange-700 px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-orange-600"
+            href="#contact"
+          >
+            Contact Society
+          </a>
+          <a
+            className="rounded-full border border-stone-300 bg-white/70 px-6 py-3 text-sm font-semibold text-stone-800 transition hover:-translate-y-0.5 hover:bg-white"
+            href="#performances"
+          >
+            Explore Programs
+>>>>>>> ab1631779d8b4110d9de3f2582276f9e8a1e1753
           </a>
         </div>
 
         <ul className="grid gap-4 md:grid-cols-3">
           {highlights.map((item) => (
+<<<<<<< HEAD
             <li
               key={item}
               className="rounded-2xl border border-stone-200 bg-orange-50/80 px-4 py-4 text-sm leading-6 text-stone-700"
             >
+=======
+            <li key={item} className="rounded-2xl border border-stone-200 bg-orange-50/80 px-4 py-4 text-sm leading-6 text-stone-700">
+>>>>>>> ab1631779d8b4110d9de3f2582276f9e8a1e1753
               {item}
             </li>
           ))}
@@ -48,6 +65,7 @@ function HeroSection() {
       </div>
 
       <div className="rounded-[1.75rem] border border-stone-700/20 bg-[linear-gradient(180deg,rgba(35,74,60,0.95),rgba(18,33,39,0.94)),linear-gradient(135deg,rgba(213,139,73,0.3),transparent)] p-7 text-white">
+<<<<<<< HEAD
         <div className="mb-5 grid gap-4 md:grid-cols-2">
           <div className="overflow-hidden rounded-2xl border border-white/10 bg-white/10 text-center text-sm text-white/70 backdrop-blur">
             <img
@@ -68,6 +86,18 @@ function HeroSection() {
         <h2 className="mt-3 font-serif text-4xl leading-tight">Music pulse across Delhi-NCR & beyond.</h2>
         <p className="mt-4 text-base leading-7 text-white/80">
           Stage-forward talent hunts like Voice of Delhi-NCR plus concerts and workshops to celebrate the golden era of music.
+=======
+        <img
+          className="mb-5 aspect-[4/3] w-full rounded-3xl object-cover"
+          src="/legacy/current_event.jpg"
+          alt="DMS Aarohi event banner"
+        />
+        <p className="text-xs uppercase tracking-[0.28em] text-white/70">Featured Program</p>
+        <h2 className="mt-3 font-serif text-4xl leading-tight">Voice of Delhi-NCR and music-led community engagement.</h2>
+        <p className="mt-4 text-base leading-7 text-white/80">
+          The legacy website highlights the society’s shows, talent hunt activities, and continued work in
+          preserving and celebrating Indian musical traditions.
+>>>>>>> ab1631779d8b4110d9de3f2582276f9e8a1e1753
         </p>
         <div className="mt-8 grid gap-4 md:grid-cols-3">
           {stats.map(([value, label]) => (

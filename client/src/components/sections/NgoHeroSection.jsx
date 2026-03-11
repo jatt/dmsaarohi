@@ -15,7 +15,11 @@ function NgoHeroSection() {
           <div className="flex flex-wrap gap-3">
             <a
               className="rounded-full bg-orange-700 px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-orange-600"
+<<<<<<< HEAD
               href="/ngo/donation#donation-form"
+=======
+              href="#donation-form"
+>>>>>>> ab1631779d8b4110d9de3f2582276f9e8a1e1753
             >
               Donate Now
             </a>
