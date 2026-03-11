@@ -29,14 +29,14 @@ function Footer() {
 
         <div className="space-y-3">
           <p className="text-xs font-bold uppercase tracking-[0.3em] text-emerald-200">Quick Links</p>
-          <a className="block text-sm text-stone-300 transition hover:text-white" href="/#performances">
-            Performances
+          <a className="block text-sm text-stone-300 transition hover:text-white" href="/home#music-society">
+            Music Society
           </a>
-          <a className="block text-sm text-stone-300 transition hover:text-white" href="/#upcoming-event">
-            Upcoming Event
+          <a className="block text-sm text-stone-300 transition hover:text-white" href="/music-society/events">
+            Events
           </a>
-          <a className="block text-sm text-stone-300 transition hover:text-white" href="/ngo">
-            NGO Page
+          <a className="block text-sm text-stone-300 transition hover:text-white" href="/ngo/activities">
+            NGO Activities
           </a>
         </div>
       </div>

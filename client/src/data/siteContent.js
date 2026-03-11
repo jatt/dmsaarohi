@@ -83,12 +83,12 @@ export const defaultContactForm = {
 
 export const defaultJoinUsForm = {
   name: "",
-  email: "",
-  phone: "",
+  age: "",
   city: "",
-  interest: "Singer",
-  experience: "",
-  message: ""
+  phone: "",
+  email: "",
+  talentType: "Singer",
+  shortBio: ""
 };
 
 export const defaultDonationForm = {

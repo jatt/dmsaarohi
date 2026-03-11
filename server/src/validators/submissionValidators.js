@@ -10,6 +10,7 @@ const joinUsSubmissionRules = [
   { field: "name", required: true },
   { field: "email", required: true },
   { field: "phone", required: true },
+  { field: "age", required: true },
   { field: "city", required: true },
   { field: "interest", required: true }
 ];

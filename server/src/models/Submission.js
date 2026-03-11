@@ -23,6 +23,11 @@ const submissionSchema = new mongoose.Schema(
       required: true,
       trim: true
     },
+    age: {
+      type: String,
+      trim: true,
+      default: ""
+    },
     subject: {
       type: String,
       trim: true,

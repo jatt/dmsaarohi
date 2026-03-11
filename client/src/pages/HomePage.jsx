@@ -1,21 +1,19 @@
 import AboutSection from "../components/sections/AboutSection";
 import ContactSection from "../components/sections/ContactSection";
 import HeroSection from "../components/sections/HeroSection";
-import PerformancesSection from "../components/sections/PerformancesSection";
-import PresidentSection from "../components/sections/PresidentSection";
 import TeamSection from "../components/sections/TeamSection";
-import UpcomingEventSection from "../components/sections/UpcomingEventSection";
 import PageShell from "../components/common/PageShell";
+import MusicSocietyPreviewSection from "../components/sections/home/MusicSocietyPreviewSection";
+import NgoPreviewSection from "../components/sections/home/NgoPreviewSection";
 
 function HomePage() {
   return (
-    <PageShell>
+    <PageShell basePath="/home">
       <HeroSection />
       <AboutSection />
-      <PerformancesSection />
-      <UpcomingEventSection />
-      <PresidentSection />
       <TeamSection />
+      <MusicSocietyPreviewSection />
+      <NgoPreviewSection />
       <ContactSection />
     </PageShell>
   );

@@ -9,6 +9,8 @@ async function connectToDatabase() {
   await mongoose.connect(env.mongoUri, {
     dbName: env.mongoDbName
   });
+
+  console.log(`MongoDB connected: ${mongoose.connection.name}`);
 }
 
 module.exports = connectToDatabase;

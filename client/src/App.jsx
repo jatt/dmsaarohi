@@ -1,13 +1,38 @@
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import HomePage from "./pages/HomePage";
-import NgoPage from "./pages/NgoPage";
+import SplashPage from "./pages/SplashPage";
+import MusicSocietyLayout from "./pages/musicSociety/MusicSocietyLayout";
+import MusicSocietyOverviewPage from "./pages/musicSociety/MusicSocietyOverviewPage";
+import MusicSocietyTalentsPage from "./pages/musicSociety/MusicSocietyTalentsPage";
+import MusicSocietyEventsPage from "./pages/musicSociety/MusicSocietyEventsPage";
+import MusicSocietyShowsPage from "./pages/musicSociety/MusicSocietyShowsPage";
+import MusicSocietyJoinUsPage from "./pages/musicSociety/MusicSocietyJoinUsPage";
+import NgoLayout from "./pages/ngo/NgoLayout";
+import NgoActivitiesPage from "./pages/ngo/NgoActivitiesPage";
+import NgoDonationPage from "./pages/ngo/NgoDonationPage";
+import NgoGalleryPage from "./pages/ngo/NgoGalleryPage";
 
 function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<HomePage />} />
-        <Route path="/ngo" element={<NgoPage />} />
+        <Route path="/" element={<SplashPage />} />
+        <Route path="/home" element={<HomePage />} />
+
+        <Route path="/music-society" element={<MusicSocietyLayout />}>
+          <Route index element={<MusicSocietyOverviewPage />} />
+          <Route path="talents" element={<MusicSocietyTalentsPage />} />
+          <Route path="events" element={<MusicSocietyEventsPage />} />
+          <Route path="shows" element={<MusicSocietyShowsPage />} />
+          <Route path="join-us" element={<MusicSocietyJoinUsPage />} />
+        </Route>
+
+        <Route path="/ngo" element={<NgoLayout />}>
+          <Route index element={<Navigate to="activities" replace />} />
+          <Route path="activities" element={<NgoActivitiesPage />} />
+          <Route path="donation" element={<NgoDonationPage />} />
+          <Route path="gallery" element={<NgoGalleryPage />} />
+        </Route>
       </Routes>
     </BrowserRouter>
   );

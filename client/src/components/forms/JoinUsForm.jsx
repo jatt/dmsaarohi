@@ -4,7 +4,7 @@ import { submitForm } from "../../lib/api";
 import { renderInputClassNames } from "../../lib/formStyles";
 import FormNotice from "../common/FormNotice";
 
-function JoinUsForm({ onClose, onStatusChange }) {
+function JoinUsForm({ onClose, onStatusChange, showClose = true }) {
   const [form, setForm] = useState(defaultJoinUsForm);
   const [status, setStatus] = useState({ type: "", message: "" });
   const [submitting, setSubmitting] = useState(false);
@@ -15,7 +15,17 @@ function JoinUsForm({ onClose, onStatusChange }) {
     setStatus({ type: "", message: "" });
 
     try {
-      const result = await submitForm("/api/forms/join-us", form);
+      const payload = {
+        name: form.name,
+        age: form.age,
+        city: form.city,
+        phone: form.phone,
+        email: form.email,
+        interest: form.talentType,
+        message: form.shortBio
+      };
+
+      const result = await submitForm("/api/forms/join-us", payload);
       setStatus({ type: "success", message: result.message });
       onStatusChange?.({ type: "success", message: result.message });
       setForm(defaultJoinUsForm);
@@ -35,46 +45,38 @@ function JoinUsForm({ onClose, onStatusChange }) {
           <p className="text-xs font-bold uppercase tracking-[0.3em] text-emerald-100">Join Us Form</p>
           <h3 className="mt-2 font-serif text-3xl text-white">Register your interest for the upcoming event.</h3>
         </div>
-        <button
-          type="button"
-          onClick={onClose}
-          className="rounded-full border border-white/20 px-4 py-2 text-sm font-semibold text-white"
-        >
-          Close
-        </button>
+        {showClose ? (
+          <button
+            type="button"
+            onClick={onClose}
+            className="rounded-full border border-white/20 px-4 py-2 text-sm font-semibold text-white"
+          >
+            Close
+          </button>
+        ) : null}
       </div>
 
       <form className="grid gap-4 md:grid-cols-2" onSubmit={handleSubmit}>
         <label className="grid gap-2 text-sm font-medium text-stone-100">
-          Full Name
+          Name
           <input
             className={renderInputClassNames(true)}
             type="text"
             value={form.name}
             onChange={(event) => setForm({ ...form, name: event.target.value })}
-            placeholder="Enter your full name"
+            placeholder="Enter your name"
             required
           />
         </label>
         <label className="grid gap-2 text-sm font-medium text-stone-100">
-          Email
+          Age
           <input
             className={renderInputClassNames(true)}
-            type="email"
-            value={form.email}
-            onChange={(event) => setForm({ ...form, email: event.target.value })}
-            placeholder="Enter your email"
-            required
-          />
-        </label>
-        <label className="grid gap-2 text-sm font-medium text-stone-100">
-          Phone Number
-          <input
-            className={renderInputClassNames(true)}
-            type="tel"
-            value={form.phone}
-            onChange={(event) => setForm({ ...form, phone: event.target.value })}
-            placeholder="Enter your phone number"
+            type="number"
+            min="1"
+            value={form.age}
+            onChange={(event) => setForm({ ...form, age: event.target.value })}
+            placeholder="Enter your age"
             required
           />
         </label>
@@ -90,36 +92,46 @@ function JoinUsForm({ onClose, onStatusChange }) {
           />
         </label>
         <label className="grid gap-2 text-sm font-medium text-stone-100">
-          Interest
-          <select
-            className={renderInputClassNames(true)}
-            value={form.interest}
-            onChange={(event) => setForm({ ...form, interest: event.target.value })}
-          >
-            <option>Singer</option>
-            <option>Volunteer</option>
-            <option>Sponsor</option>
-            <option>Coordinator</option>
-            <option>Audience Registration</option>
-          </select>
-        </label>
-        <label className="grid gap-2 text-sm font-medium text-stone-100">
-          Experience
+          Phone
           <input
             className={renderInputClassNames(true)}
-            type="text"
-            value={form.experience}
-            onChange={(event) => setForm({ ...form, experience: event.target.value })}
-            placeholder="Singing, volunteering, sponsorship, etc."
+            type="tel"
+            value={form.phone}
+            onChange={(event) => setForm({ ...form, phone: event.target.value })}
+            placeholder="Enter your phone"
+            required
           />
         </label>
+        <label className="grid gap-2 text-sm font-medium text-stone-100">
+          Email
+          <input
+            className={renderInputClassNames(true)}
+            type="email"
+            value={form.email}
+            onChange={(event) => setForm({ ...form, email: event.target.value })}
+            placeholder="Enter your email"
+            required
+          />
+        </label>
+        <label className="grid gap-2 text-sm font-medium text-stone-100">
+          Talent Type
+          <select
+            className={renderInputClassNames(true)}
+            value={form.talentType}
+            onChange={(event) => setForm({ ...form, talentType: event.target.value })}
+          >
+            <option>Singer</option>
+            <option>Musician</option>
+          </select>
+        </label>
         <label className="grid gap-2 text-sm font-medium text-stone-100 md:col-span-2">
-          Message
+          Short Bio
           <textarea
             className={`${renderInputClassNames(true)} min-h-32`}
-            value={form.message}
-            onChange={(event) => setForm({ ...form, message: event.target.value })}
-            placeholder="Tell us why you want to join"
+            value={form.shortBio}
+            onChange={(event) => setForm({ ...form, shortBio: event.target.value })}
+            placeholder="Write a short bio"
+            required
           />
         </label>
         <div className="space-y-4 md:col-span-2">
@@ -129,7 +141,7 @@ function JoinUsForm({ onClose, onStatusChange }) {
             disabled={submitting}
             className="rounded-full bg-orange-700 px-6 py-3 text-sm font-semibold text-white transition hover:bg-orange-600 disabled:cursor-not-allowed disabled:opacity-70"
           >
-            {submitting ? "Submitting..." : "Submit Join Us Form"}
+            {submitting ? "Submitting..." : "Submit"}
           </button>
         </div>
       </form>

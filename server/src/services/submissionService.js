@@ -17,9 +17,9 @@ async function createJoinUsSubmission(payload) {
     name: payload.name,
     email: payload.email,
     phone: payload.phone,
+    age: payload.age,
     city: payload.city,
     interest: payload.interest,
-    experience: payload.experience,
     message: payload.message
   });
 }

@@ -2,10 +2,12 @@ import { Link } from "react-router-dom";
 
 function Navbar({ basePath = "/" }) {
   const navItems = [
-    { label: "Home", href: `${basePath}#home` },
-    { label: "About", href: `${basePath}#about` },
-    { label: "Performances", href: `${basePath}#performances` },
-    { label: "Contact", href: `${basePath}#contact` }
+    { label: "Home", href: "/home#home" },
+    { label: "About", href: "/home#about" },
+    { label: "Team", href: "/home#team" },
+    { label: "Music Society", href: "/home#music-society" },
+    { label: "NGO", href: "/home#ngo" },
+    { label: "Contact", href: "/home#contact" }
   ];
 
   return (
@@ -18,7 +20,7 @@ function Navbar({ basePath = "/" }) {
             alt="Talent Hunt logo"
           />
           <div>
-            <p className="font-serif text-xl font-bold text-stone-900">DMS Aarohi Musical Society</p>
+            <p className="font-serif text-xl font-bold text-stone-900">DMS Aarohi</p>
             <p className="text-sm text-stone-600">New Delhi musical society and cultural NGO initiative</p>
           </div>
         </div>
@@ -35,16 +37,16 @@ function Navbar({ basePath = "/" }) {
       <div className="flex items-center gap-3">
         <Link
           className="rounded-full bg-emerald-900 px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-emerald-800"
-          to="/ngo"
+          to="/ngo/activities"
         >
           NGO
         </Link>
-        <a
+        <Link
           className="rounded-full bg-orange-700 px-5 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-orange-600"
-          href={`${basePath}#upcoming-event`}
+          to="/music-society/events"
         >
           Upcoming Event
-        </a>
+        </Link>
       </div>
     </header>
   );
