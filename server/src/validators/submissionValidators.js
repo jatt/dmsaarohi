@@ -8,7 +8,6 @@ const contactSubmissionRules = [
 
 const joinUsSubmissionRules = [
   { field: "name", required: true },
-<<<<<<< HEAD
   { field: "stageName", required: false },
   { field: "age", required: true },
   { field: "gender", required: true },
@@ -33,13 +32,6 @@ const talentShowSubmissionRules = [
   { field: "languagePreference", required: true },
   { field: "videoLink", required: true },
   { field: "shortIntroduction", required: true }
-=======
-  { field: "email", required: true },
-  { field: "phone", required: true },
-  { field: "age", required: true },
-  { field: "city", required: true },
-  { field: "interest", required: true }
->>>>>>> ab1631779d8b4110d9de3f2582276f9e8a1e1753
 ];
 
 const donationSubmissionRules = [
@@ -50,7 +42,6 @@ const donationSubmissionRules = [
   { field: "purpose", required: true }
 ];
 
-<<<<<<< HEAD
 const ngoContactSubmissionRules = [
   { field: "name", required: true },
   { field: "phone", required: true },
@@ -66,10 +57,4 @@ module.exports = {
   talentShowSubmissionRules,
   donationSubmissionRules,
   ngoContactSubmissionRules
-=======
-module.exports = {
-  contactSubmissionRules,
-  joinUsSubmissionRules,
-  donationSubmissionRules
->>>>>>> ab1631779d8b4110d9de3f2582276f9e8a1e1753
 };

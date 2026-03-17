@@ -1,5 +1,4 @@
 const API_BASE_URL = import.meta.env.VITE_API_URL || "";
-<<<<<<< HEAD
 const ADMIN_TOKEN_KEY = "adminToken";
 
 async function handleResponse(response) {
@@ -9,13 +8,10 @@ async function handleResponse(response) {
   }
   return result;
 }
-=======
->>>>>>> ab1631779d8b4110d9de3f2582276f9e8a1e1753
 
 export async function submitForm(endpoint, payload) {
   const response = await fetch(`${API_BASE_URL}${endpoint}`, {
     method: "POST",
-<<<<<<< HEAD
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(payload)
   });
@@ -97,19 +93,4 @@ export async function deleteAdmin(endpoint) {
     }
   });
   return handleResponse(response);
-=======
-    headers: {
-      "Content-Type": "application/json"
-    },
-    body: JSON.stringify(payload)
-  });
-
-  const result = await response.json();
-
-  if (!response.ok) {
-    throw new Error(result.message || "Unable to submit form.");
-  }
-
-  return result;
->>>>>>> ab1631779d8b4110d9de3f2582276f9e8a1e1753
 }

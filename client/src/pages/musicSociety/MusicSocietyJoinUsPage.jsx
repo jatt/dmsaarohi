@@ -16,7 +16,13 @@ function MusicSocietyJoinUsPage() {
             text="Submit your interest to participate in upcoming events: singer, volunteer, sponsor, coordinator, or audience registration."
           />
           <div className="overflow-hidden rounded-[1.75rem] border border-stone-200 bg-white/80 p-3 shadow-2xl">
-            <img className="w-full rounded-[1.25rem] object-cover" src="/legacy/Joinus.jpg" alt="Join us poster" />
+            <img
+              className="w-full rounded-[1.25rem] object-cover"
+              src="/legacy/Joinus.jpg"
+              alt="Join us poster"
+              loading="lazy"
+              decoding="async"
+            />
           </div>
         </div>
         <div className="mt-6">

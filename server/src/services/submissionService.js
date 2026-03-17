@@ -15,7 +15,6 @@ async function createJoinUsSubmission(payload) {
   return Submission.create({
     formType: "join-us",
     name: payload.name,
-<<<<<<< HEAD
     stageName: payload.stageName,
     email: payload.email,
     phone: payload.phone,
@@ -45,14 +44,6 @@ async function createTalentShowSubmission(payload) {
     videoLink: payload.videoLink,
     shortIntroduction: payload.shortIntroduction,
     message: payload.shortIntroduction
-=======
-    email: payload.email,
-    phone: payload.phone,
-    age: payload.age,
-    city: payload.city,
-    interest: payload.interest,
-    message: payload.message
->>>>>>> ab1631779d8b4110d9de3f2582276f9e8a1e1753
   });
 }
 
@@ -68,7 +59,6 @@ async function createDonationSubmission(payload) {
   });
 }
 
-<<<<<<< HEAD
 async function createNgoContactSubmission(payload) {
   return Submission.create({
     formType: "ngo-contact",
@@ -81,14 +71,11 @@ async function createNgoContactSubmission(payload) {
   });
 }
 
-=======
->>>>>>> ab1631779d8b4110d9de3f2582276f9e8a1e1753
 async function getSubmissions(formType) {
   const query = formType ? { formType } : {};
   return Submission.find(query).sort({ createdAt: -1 }).lean();
 }
 
-<<<<<<< HEAD
 async function getSubmissionsByTypes(formTypes) {
   return Submission.find({ formType: { $in: formTypes } })
     .sort({ createdAt: -1 })
@@ -103,11 +90,4 @@ module.exports = {
   createNgoContactSubmission,
   getSubmissions,
   getSubmissionsByTypes
-=======
-module.exports = {
-  createContactSubmission,
-  createJoinUsSubmission,
-  createDonationSubmission,
-  getSubmissions
->>>>>>> ab1631779d8b4110d9de3f2582276f9e8a1e1753
 };

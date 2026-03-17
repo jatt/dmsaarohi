@@ -13,7 +13,14 @@ function NgoGallerySection() {
       </div>
       <div className="mt-8 grid gap-4 md:grid-cols-4">
         {ngoGallery.map((image) => (
-          <img key={image} className="aspect-square w-full rounded-3xl object-cover" src={image} alt="DMS Aarohi voluntary work" />
+          <img
+            key={image}
+            className="aspect-square w-full rounded-3xl object-cover"
+            src={image}
+            alt="DMS Aarohi voluntary work"
+            loading="lazy"
+            decoding="async"
+          />
         ))}
       </div>
     </section>

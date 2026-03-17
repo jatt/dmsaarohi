@@ -40,7 +40,6 @@ function NgoContactForm() {
             type="text"
             value={form.name}
             onChange={(event) => setForm({ ...form, name: event.target.value })}
-            placeholder="Enter your name"
             required
           />
         </label>
@@ -51,11 +50,10 @@ function NgoContactForm() {
             type="tel"
             value={form.phone}
             onChange={(event) => setForm({ ...form, phone: event.target.value })}
-            placeholder="Enter your phone number"
             required
           />
         </label>
-        <label className="grid gap-2 text-sm font-medium text-stone-100">
+        {/* <label className="grid gap-2 text-sm font-medium text-stone-100">
           Email
           <input
             className={renderInputClassNames(true)}
@@ -65,8 +63,8 @@ function NgoContactForm() {
             placeholder="Enter your email"
             required
           />
-        </label>
-        <label className="grid gap-2 text-sm font-medium text-stone-100">
+        </label> */}
+        {/* <label className="grid gap-2 text-sm font-medium text-stone-100">
           City
           <input
             className={renderInputClassNames(true)}
@@ -76,11 +74,11 @@ function NgoContactForm() {
             placeholder="Enter your city"
             required
           />
-        </label>
+        </label> */}
         <label className="grid gap-2 text-sm font-medium text-stone-100">
           How You Want to Help
           <select
-            className={renderInputClassNames(true)}
+            className={`${renderInputClassNames(true)} `}
             value={form.helpType}
             onChange={(event) => setForm({ ...form, helpType: event.target.value })}
             required
@@ -94,7 +92,7 @@ function NgoContactForm() {
         <label className="grid gap-2 text-sm font-medium text-stone-100 md:col-span-2">
           Message
           <textarea
-            className={`${renderInputClassNames(true)} min-h-32`}
+            className={`${renderInputClassNames(true)} min-h-22`}
             value={form.message}
             onChange={(event) => setForm({ ...form, message: event.target.value })}
             placeholder="Share details about how you’d like to support"

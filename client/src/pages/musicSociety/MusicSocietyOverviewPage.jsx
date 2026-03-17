@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import SectionHeading from "../../components/common/SectionHeading";
 import PerformancesSection from "../../components/sections/PerformancesSection";
+import HeroSection from "../../components/sections/HeroSection";
 
 function MusicSocietyOverviewPage() {
   const cards = [
@@ -28,6 +29,8 @@ function MusicSocietyOverviewPage() {
 
   return (
     <div className="space-y-7">
+      <HeroSection />
+
       <section className="rounded-[2rem] border border-white/40 bg-[#fff8ef] p-8 shadow-[0_24px_80px_rgba(84,42,24,0.14)] md:p-10">
         <div className="grid gap-7 md:grid-cols-[1.05fr_0.95fr]">
           <SectionHeading
@@ -58,7 +61,7 @@ function MusicSocietyOverviewPage() {
 
       <PerformancesSection />
 
-      <section className="grid gap-5 md:grid-cols-2">
+      {/* <section className="grid gap-5 md:grid-cols-2">
         {cards.map((card) => (
           <article
             key={card.title}
@@ -75,7 +78,7 @@ function MusicSocietyOverviewPage() {
             </Link>
           </article>
         ))}
-      </section>
+      </section> */}
     </div>
   );
 }

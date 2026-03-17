@@ -4,11 +4,11 @@ import PageShell from "../../components/common/PageShell";
 function MusicSocietyLayout() {
   const location = useLocation();
   const tabs = [
-    { label: "Overview", to: "/music-society" },
+    // { label: "Overview", to: "/music-society" },
     { label: "Talents", to: "/music-society/talents" },
     { label: "Events", to: "/music-society/events" },
     { label: "Shows", to: "/music-society/shows" },
-    { label: "Join Us", to: "/music-society/join-us" }
+    // { label: "Join Us", to: "/music-society/join-us" }
   ];
 
   return (

@@ -4,11 +4,7 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-<<<<<<< HEAD
     "dev": "vite --host --port 5174",
-=======
-    "dev": "vite",
->>>>>>> ab1631779d8b4110d9de3f2582276f9e8a1e1753
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"

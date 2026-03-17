@@ -35,21 +35,21 @@ function DonationForm() {
             type="text"
             value={form.name}
             onChange={(event) => setForm({ ...form, name: event.target.value })}
-            placeholder="Enter your full name"
+            // placeholder="Enter your full name"
             required
           />
         </label>
-        <label className="grid gap-2 text-sm font-medium text-stone-700">
+        {/* <label className="grid gap-2 text-sm font-medium text-stone-700">
           Email
           <input
             className={renderInputClassNames()}
             type="email"
             value={form.email}
             onChange={(event) => setForm({ ...form, email: event.target.value })}
-            placeholder="Enter your email"
+            // placeholder="Enter your email"
             required
           />
-        </label>
+        </label> */}
         <label className="grid gap-2 text-sm font-medium text-stone-700">
           Phone Number
           <input
@@ -57,11 +57,11 @@ function DonationForm() {
             type="tel"
             value={form.phone}
             onChange={(event) => setForm({ ...form, phone: event.target.value })}
-            placeholder="Enter your phone number"
+            // placeholder="Enter your phone number"
             required
           />
         </label>
-        <label className="grid gap-2 text-sm font-medium text-stone-700">
+        {/* <label className="grid gap-2 text-sm font-medium text-stone-700">
           Donation Amount
           <input
             className={renderInputClassNames()}
@@ -71,14 +71,18 @@ function DonationForm() {
             placeholder="Enter donation amount"
             required
           />
-        </label>
+        </label> */}
         <label className="grid gap-2 text-sm font-medium text-stone-700 md:col-span-2">
           Purpose
           <select
             className={renderInputClassNames()}
             value={form.purpose}
             onChange={(event) => setForm({ ...form, purpose: event.target.value })}
+            required
           >
+            {/* <option value="" enabled>
+              Select purpose
+            </option> */}
             <option>Blood Donation Support</option>
             <option>Child Education</option>
             <option>Senior Citizen Welfare</option>
@@ -89,10 +93,10 @@ function DonationForm() {
         <label className="grid gap-2 text-sm font-medium text-stone-700 md:col-span-2">
           Message
           <textarea
-            className={`${renderInputClassNames()} min-h-36`}
+            className={`${renderInputClassNames()} min-h-16`}
             value={form.message}
             onChange={(event) => setForm({ ...form, message: event.target.value })}
-            placeholder="Write your message"
+            // placeholder="Write your message"
           />
         </label>
       </div>

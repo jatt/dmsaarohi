@@ -13,7 +13,15 @@ function AboutSection() {
           title="Built to promote music, talent, and cultural participation."
           text="The original DMS Aarohi website describes the society as a voluntary musical organisation dedicated to encouraging talent and motivating people through music, concerts, and shared cultural platforms."
         />
-        <img className="w-full rounded-[1.75rem] object-cover" src="/legacy/about_group.png" alt="DMS Aarohi group" />
+        <img
+          className="w-full rounded-[1.75rem] object-cover"
+          src="/legacy/about_group.png"
+          alt="DMS Aarohi group"
+          loading="lazy"
+          decoding="async"
+          width="1200"
+          height="800"
+        />
       </div>
       <div className="mt-8 grid gap-4 md:grid-cols-2">
         {objectives.map((item) => (

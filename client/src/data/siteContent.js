@@ -81,8 +81,7 @@ export const defaultContactForm = {
   message: ""
 };
 
-<<<<<<< HEAD
-const ngoContactFormDefaults = {
+export const defaultNgoContactForm = {
   name: "",
   phone: "",
   email: "",
@@ -90,8 +89,6 @@ const ngoContactFormDefaults = {
   helpType: "Donate Food",
   message: ""
 };
-
-export const defaultNgoContactForm = ngoContactFormDefaults;
 
 export const defaultJoinUsForm = {
   fullName: "",
@@ -105,16 +102,6 @@ export const defaultJoinUsForm = {
   languagePreference: "Hindi",
   videoLink: "",
   shortIntroduction: ""
-=======
-export const defaultJoinUsForm = {
-  name: "",
-  age: "",
-  city: "",
-  phone: "",
-  email: "",
-  talentType: "Singer",
-  shortBio: ""
->>>>>>> ab1631779d8b4110d9de3f2582276f9e8a1e1753
 };
 
 export const defaultDonationForm = {

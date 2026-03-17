@@ -4,11 +4,7 @@ const submissionSchema = new mongoose.Schema(
   {
     formType: {
       type: String,
-<<<<<<< HEAD
       enum: ["contact", "join-us", "donation", "ngo-contact", "talent-show"],
-=======
-      enum: ["contact", "join-us", "donation"],
->>>>>>> ab1631779d8b4110d9de3f2582276f9e8a1e1753
       required: true
     },
     name: {
@@ -27,7 +23,6 @@ const submissionSchema = new mongoose.Schema(
       required: true,
       trim: true
     },
-<<<<<<< HEAD
     stageName: {
       type: String,
       trim: true,
@@ -38,8 +33,6 @@ const submissionSchema = new mongoose.Schema(
       trim: true,
       default: ""
     },
-=======
->>>>>>> ab1631779d8b4110d9de3f2582276f9e8a1e1753
     age: {
       type: String,
       trim: true,
@@ -60,7 +53,6 @@ const submissionSchema = new mongoose.Schema(
       trim: true,
       default: ""
     },
-<<<<<<< HEAD
     talentCategory: {
       type: String,
       trim: true,
@@ -76,8 +68,6 @@ const submissionSchema = new mongoose.Schema(
       trim: true,
       default: ""
     },
-=======
->>>>>>> ab1631779d8b4110d9de3f2582276f9e8a1e1753
     experience: {
       type: String,
       trim: true,
@@ -93,26 +83,20 @@ const submissionSchema = new mongoose.Schema(
       trim: true,
       default: ""
     },
-<<<<<<< HEAD
     helpType: {
       type: String,
       trim: true,
       default: ""
     },
-=======
->>>>>>> ab1631779d8b4110d9de3f2582276f9e8a1e1753
     message: {
       type: String,
       trim: true,
       default: ""
-<<<<<<< HEAD
     },
     shortIntroduction: {
       type: String,
       trim: true,
       default: ""
-=======
->>>>>>> ab1631779d8b4110d9de3f2582276f9e8a1e1753
     }
   },
   {

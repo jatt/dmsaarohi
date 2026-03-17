@@ -7,7 +7,7 @@ function SplashPage() {
   useEffect(() => {
     const timeoutId = window.setTimeout(() => {
       navigate("/home", { replace: true });
-    }, 1800);
+    }, 900);
 
     return () => window.clearTimeout(timeoutId);
   }, [navigate]);
@@ -22,6 +22,7 @@ function SplashPage() {
             className="h-16 w-16 rounded-full border border-stone-200 bg-white object-cover"
             src="/legacy/tal_logo1.png"
             alt="Talent Hunt logo"
+            decoding="async"
           />
           <div>
             <p className="font-serif text-3xl leading-tight">DMS Aarohi Musical Society</p>

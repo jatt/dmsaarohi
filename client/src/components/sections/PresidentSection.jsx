@@ -4,7 +4,13 @@ function PresidentSection() {
   return (
     <section className="rounded-[2rem] border border-white/40 bg-[#fff8ef] p-8 shadow-[0_24px_80px_rgba(84,42,24,0.14)] md:p-10">
       <div className="grid items-center gap-7 md:grid-cols-[0.9fr_1.1fr]">
-        <img className="w-full rounded-[1.75rem] object-cover" src="/legacy/pp.jpg" alt="Pankaj Mathur" />
+        <img
+          className="w-full rounded-[1.75rem] object-cover"
+          src="/legacy/pp.jpg"
+          alt="Pankaj Mathur"
+          loading="lazy"
+          decoding="async"
+        />
         <div>
           <SectionHeading
             eyebrow="President Speaks"

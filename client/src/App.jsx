@@ -1,55 +1,54 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-import HomePage from "./pages/HomePage";
-import SplashPage from "./pages/SplashPage";
-import MusicSocietyLayout from "./pages/musicSociety/MusicSocietyLayout";
-import MusicSocietyOverviewPage from "./pages/musicSociety/MusicSocietyOverviewPage";
-import MusicSocietyTalentsPage from "./pages/musicSociety/MusicSocietyTalentsPage";
-import MusicSocietyEventsPage from "./pages/musicSociety/MusicSocietyEventsPage";
-import MusicSocietyShowsPage from "./pages/musicSociety/MusicSocietyShowsPage";
-import MusicSocietyJoinUsPage from "./pages/musicSociety/MusicSocietyJoinUsPage";
-import NgoLayout from "./pages/ngo/NgoLayout";
-import NgoActivitiesPage from "./pages/ngo/NgoActivitiesPage";
-import NgoDonationPage from "./pages/ngo/NgoDonationPage";
-import NgoGalleryPage from "./pages/ngo/NgoGalleryPage";
-<<<<<<< HEAD
-import NgoContactPage from "./pages/ngo/NgoContactPage";
-import AdminPage from "./pages/admin/AdminPage";
-import AdminLoginPage from "./pages/admin/AdminLoginPage";
-import AdminGuard from "./pages/admin/AdminGuard";
-=======
->>>>>>> ab1631779d8b4110d9de3f2582276f9e8a1e1753
+import { Suspense, lazy } from "react";
+import LogoLoader from "./components/common/LogoLoader";
+
+const HomePage = lazy(() => import("./pages/HomePage"));
+const SplashPage = lazy(() => import("./pages/SplashPage"));
+const MusicSocietyLayout = lazy(() => import("./pages/musicSociety/MusicSocietyLayout"));
+const MusicSocietyOverviewPage = lazy(() => import("./pages/musicSociety/MusicSocietyOverviewPage"));
+const MusicSocietyTalentsPage = lazy(() => import("./pages/musicSociety/MusicSocietyTalentsPage"));
+const MusicSocietyEventsPage = lazy(() => import("./pages/musicSociety/MusicSocietyEventsPage"));
+const MusicSocietyShowsPage = lazy(() => import("./pages/musicSociety/MusicSocietyShowsPage"));
+const MusicSocietyJoinUsPage = lazy(() => import("./pages/musicSociety/MusicSocietyJoinUsPage"));
+const NgoLayout = lazy(() => import("./pages/ngo/NgoLayout"));
+const NgoActivitiesPage = lazy(() => import("./pages/ngo/NgoActivitiesPage"));
+const NgoDonationPage = lazy(() => import("./pages/ngo/NgoDonationPage"));
+const NgoGalleryPage = lazy(() => import("./pages/ngo/NgoGalleryPage"));
+const NgoContactPage = lazy(() => import("./pages/ngo/NgoContactPage"));
+const AdminPage = lazy(() => import("./pages/admin/AdminPage"));
+const AdminLoginPage = lazy(() => import("./pages/admin/AdminLoginPage"));
+const AdminGuard = lazy(() => import("./pages/admin/AdminGuard"));
 
 function App() {
   return (
     <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<SplashPage />} />
-        <Route path="/home" element={<HomePage />} />
+      <Suspense fallback={<LogoLoader />}>
+        <Routes>
+          <Route path="/" element={<SplashPage />} />
+          <Route path="/home" element={<HomePage />} />
 
-        <Route path="/music-society" element={<MusicSocietyLayout />}>
-          <Route index element={<MusicSocietyOverviewPage />} />
-          <Route path="talents" element={<MusicSocietyTalentsPage />} />
-          <Route path="events" element={<MusicSocietyEventsPage />} />
-          <Route path="shows" element={<MusicSocietyShowsPage />} />
-          <Route path="join-us" element={<MusicSocietyJoinUsPage />} />
-        </Route>
+          <Route path="/music-society" element={<MusicSocietyLayout />}>
+            <Route index element={<MusicSocietyOverviewPage />} />
+            <Route path="talents" element={<MusicSocietyTalentsPage />} />
+            <Route path="events" element={<MusicSocietyEventsPage />} />
+            <Route path="shows" element={<MusicSocietyShowsPage />} />
+            <Route path="join-us" element={<MusicSocietyJoinUsPage />} />
+          </Route>
 
-        <Route path="/ngo" element={<NgoLayout />}>
-          <Route index element={<Navigate to="activities" replace />} />
-          <Route path="activities" element={<NgoActivitiesPage />} />
-          <Route path="donation" element={<NgoDonationPage />} />
-          <Route path="gallery" element={<NgoGalleryPage />} />
-<<<<<<< HEAD
-          <Route path="contact" element={<NgoContactPage />} />
-        </Route>
+          <Route path="/ngo" element={<NgoLayout />}>
+            <Route index element={<Navigate to="activities" replace />} />
+            <Route path="activities" element={<NgoActivitiesPage />} />
+            <Route path="donation" element={<NgoDonationPage />} />
+            <Route path="gallery" element={<NgoGalleryPage />} />
+            <Route path="contact" element={<NgoContactPage />} />
+          </Route>
 
-        <Route path="/admin/login" element={<AdminLoginPage />} />
-        <Route path="/admin" element={<AdminGuard />}>
-          <Route index element={<AdminPage />} />
-=======
->>>>>>> ab1631779d8b4110d9de3f2582276f9e8a1e1753
-        </Route>
-      </Routes>
+          <Route path="/admin/login" element={<AdminLoginPage />} />
+          <Route path="/admin" element={<AdminGuard />}>
+            <Route index element={<AdminPage />} />
+          </Route>
+        </Routes>
+      </Suspense>
     </BrowserRouter>
   );
 }

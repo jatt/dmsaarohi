@@ -15,20 +15,16 @@ function NgoHeroSection() {
           <div className="flex flex-wrap gap-3">
             <a
               className="rounded-full bg-orange-700 px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-orange-600"
-<<<<<<< HEAD
               href="/ngo/donation#donation-form"
-=======
-              href="#donation-form"
->>>>>>> ab1631779d8b4110d9de3f2582276f9e8a1e1753
             >
-              Donate Now
+              Contact Now
             </a>
-            <a
+            {/* <a
               className="rounded-full border border-white/20 bg-white/10 px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5 hover:bg-white/20"
               href="mailto:dmsaarohi@gmail.com"
             >
               NGO Contact
-            </a>
+            </a> */}
           </div>
         </div>
 
@@ -46,7 +42,15 @@ function NgoHeroSection() {
       </div>
 
       <div className="relative mt-8 min-h-full md:mt-0">
-        <img className="h-full min-h-[460px] w-full rounded-[1.9rem] object-cover" src="/legacy/bd4.jpg" alt="DMS Aarohi voluntary work" />
+        <img
+          className="h-full min-h-[460px] w-full rounded-[1.9rem] object-cover"
+          src="/legacy/bd4.jpg"
+          alt="DMS Aarohi voluntary work"
+          loading="lazy"
+          decoding="async"
+          width="1200"
+          height="800"
+        />
         <div className="absolute inset-x-6 bottom-6 rounded-[1.6rem] border border-white/10 bg-stone-950/70 p-6 backdrop-blur">
           <p className="text-xs uppercase tracking-[0.3em] text-emerald-100">Community Focus</p>
           <h2 className="mt-3 font-serif text-3xl leading-tight text-white">

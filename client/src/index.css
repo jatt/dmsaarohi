@@ -22,7 +22,6 @@
   .animate-team-slide-reverse {
     animation: team-slide 24s linear infinite reverse;
   }
-<<<<<<< HEAD
 
   .music-pulse {
     animation: pulse-glow 2.4s ease-in-out infinite;
@@ -37,9 +36,10 @@
     position: absolute;
     inset: -6px;
     border-radius: 999px;
-    background: radial-gradient(circle, rgba(255,255,255,0.8) 0%, rgba(255,255,255,0) 60%);
+    background: radial-gradient(circle, rgba(16, 185, 129, 0.35) 0%, rgba(16, 185, 129, 0) 65%);
     animation: sound-wave 2.4s linear infinite;
-    opacity: 0.65;
+    opacity: 0.9;
+    pointer-events: none;
   }
 
   .soundwave-ring.ring-2 {
@@ -49,8 +49,6 @@
   .soundwave-ring.ring-3 {
     animation-delay: 1.2s;
   }
-=======
->>>>>>> ab1631779d8b4110d9de3f2582276f9e8a1e1753
 }
 
 html {
@@ -62,7 +60,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-<<<<<<< HEAD
 
 @keyframes sound-wave {
   0% {
@@ -110,5 +107,3 @@ body {
 .animate-spin-slow {
   animation: spin 2.2s linear infinite;
 }
-=======
->>>>>>> ab1631779d8b4110d9de3f2582276f9e8a1e1753
