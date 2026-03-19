@@ -2,9 +2,19 @@ const API_BASE_URL = import.meta.env.VITE_API_URL || "";
 const ADMIN_TOKEN_KEY = "adminToken";
 
 async function handleResponse(response) {
-  const result = await response.json();
+  // Gracefully handle empty or non-JSON responses to avoid JSON.parse errors
+  let result = null;
+  try {
+    const text = await response.text();
+    result = text ? JSON.parse(text) : {};
+  } catch (err) {
+    // Fallback when response isn't JSON
+    result = {};
+  }
+
   if (!response.ok) {
-    throw new Error(result.message || "Request failed.");
+    const message = result?.message || `Request failed (${response.status})`;
+    throw new Error(message);
   }
   return result;
 }

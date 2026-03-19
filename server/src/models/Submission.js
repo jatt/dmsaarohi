@@ -14,7 +14,10 @@ const submissionSchema = new mongoose.Schema(
     },
     email: {
       type: String,
-      required: true,
+      required: function () {
+        // Email is optional for donation submissions
+        return ["contact", "join-us", "ngo-contact", "talent-show"].includes(this.formType);
+      },
       trim: true,
       lowercase: true
     },
@@ -76,7 +79,8 @@ const submissionSchema = new mongoose.Schema(
     amount: {
       type: String,
       trim: true,
-      default: ""
+      default: "",
+      required: false
     },
     purpose: {
       type: String,

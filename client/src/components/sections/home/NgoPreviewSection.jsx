@@ -5,7 +5,9 @@ function NgoPreviewSection() {
   const links = [
     { title: "Activities", to: "/ngo/activities", desc: "Focus areas and community support initiatives." },
     { title: "Donation", to: "/ngo/donation", desc: "Donation form saved to MongoDB." },
-    { title: "Image Gallery", to: "/ngo/gallery", desc: "Service activity and outreach images." }
+    { title: "Gallary", to: "/ngo/gallery", desc: "Service activity and outreach images." },
+    { title: "Services", to: "/ngo/services", desc: "Browse causes and donate quickly." },
+    { title: "Volunteer", to: "/ngo/activities#volunteer", desc: "Get involved and support the mission." }
   ];
 
   return (
@@ -13,8 +15,8 @@ function NgoPreviewSection() {
       <div className="flex flex-wrap items-end justify-between gap-4">
         <SectionHeading
           eyebrow="NGO"
-          title="Activities, donation, and image gallery."
-          text="NGO is split into Activities, Donation, and Image Gallery as separate pages."
+          title="Activities, donation, and image gallary."
+          text="NGO is split into Activities, Services, Donation, and Image Gallary with a highlight for the Volunteer path."
         />
         <Link
           to="/ngo/activities"

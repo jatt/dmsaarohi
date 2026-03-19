@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom";
 import { useState } from "react";
 
 function Navbar({ basePath = "/" }) {
@@ -67,73 +66,13 @@ function Navbar({ basePath = "/" }) {
       >
         <div className="flex items-center justify-between md:hidden">
           <span className="text-xs uppercase tracking-[0.2em] text-stone-500">Menu</span>
-          {/* <button
-            type="button"
-            className="rounded-full border border-stone-200 bg-white px-3 py-2 text-xs font-semibold text-stone-700 shadow-sm transition hover:bg-stone-50"
-            onClick={() => setMenuOpen(false)}
-          >
-            Close
-          </button> */}
         </div>
         {navItems.map((item) => (
           <a key={item.label} href={item.href} className="transition hover:text-stone-950">
             {item.label}
           </a>
         ))}
-
-        {menuOpen ? (
-          <div className="flex flex-col gap-2 md:hidden">
-            <Link
-              className="rounded-full bg-gradient-to-r from-emerald-800 to-emerald-600 px-5 py-3 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5"
-              to="/music-society"
-              onClick={() => setMenuOpen(false)}
-            >
-              Music Society
-            </Link>
-            <Link
-              className="rounded-full bg-gradient-to-r from-orange-700 to-amber-500 px-5 py-3 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5"
-              to="/ngo"
-              onClick={() => setMenuOpen(false)}
-            >
-              NGO
-            </Link>
-          </div>
-        ) : null}
       </nav>
-
-      <div className="hidden items-center gap-3 md:flex">
-        <Link
-          className="music-pulse rounded-full bg-gradient-to-r from-emerald-800 to-emerald-600 px-5 py-3 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5"
-          to="/music-society"
-        >
-          Music Society
-        </Link>
-        <Link
-          className="music-pulse rounded-full bg-gradient-to-r from-orange-700 to-amber-500 px-5 py-3 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5"
-          to="/ngo"
-        >
-          NGO
-        </Link>
-      </div>
-
-      {menuOpen ? (
-        <div className="mt-3 flex w-full flex-col gap-2 md:hidden">
-          <Link
-            className="rounded-full bg-gradient-to-r from-emerald-800 to-emerald-600 px-5 py-3 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5"
-            to="/music-society"
-            onClick={() => setMenuOpen(false)}
-          >
-            Music Society
-          </Link>
-          <Link
-            className="rounded-full bg-gradient-to-r from-orange-700 to-amber-500 px-5 py-3 text-sm font-semibold text-white shadow-lg transition hover:-translate-y-0.5"
-            to="/ngo"
-            onClick={() => setMenuOpen(false)}
-          >
-            NGO
-          </Link>
-        </div>
-      ) : null}
     </header>
   );
 }

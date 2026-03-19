@@ -36,9 +36,11 @@ const talentShowSubmissionRules = [
 
 const donationSubmissionRules = [
   { field: "name", required: true },
-  { field: "email", required: true },
+  // Email optional for donations per request
+  { field: "email", required: false },
   { field: "phone", required: true },
-  { field: "amount", required: true },
+  // Amount optional for donations per request
+  { field: "amount", required: false },
   { field: "purpose", required: true }
 ];
 

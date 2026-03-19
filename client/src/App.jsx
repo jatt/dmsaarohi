@@ -13,6 +13,7 @@ const MusicSocietyJoinUsPage = lazy(() => import("./pages/musicSociety/MusicSoci
 const NgoLayout = lazy(() => import("./pages/ngo/NgoLayout"));
 const NgoActivitiesPage = lazy(() => import("./pages/ngo/NgoActivitiesPage"));
 const NgoDonationPage = lazy(() => import("./pages/ngo/NgoDonationPage"));
+const NgoServicesPage = lazy(() => import("./pages/ngo/NgoServicesPage"));
 const NgoGalleryPage = lazy(() => import("./pages/ngo/NgoGalleryPage"));
 const NgoContactPage = lazy(() => import("./pages/ngo/NgoContactPage"));
 const AdminPage = lazy(() => import("./pages/admin/AdminPage"));
@@ -38,6 +39,7 @@ function App() {
           <Route path="/ngo" element={<NgoLayout />}>
             <Route index element={<Navigate to="activities" replace />} />
             <Route path="activities" element={<NgoActivitiesPage />} />
+            <Route path="services" element={<NgoServicesPage />} />
             <Route path="donation" element={<NgoDonationPage />} />
             <Route path="gallery" element={<NgoGalleryPage />} />
             <Route path="contact" element={<NgoContactPage />} />
