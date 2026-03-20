@@ -23,7 +23,7 @@ function HeroSection() {
         <div className="flex flex-wrap items-center gap-3">
           <a
             className="music-pulse rounded-full bg-gradient-to-r from-orange-700 to-amber-500 px-6 py-3 text-sm font-semibold text-white transition hover:-translate-y-0.5"
-            href="/home#contact"
+            href="#contact"
           >
             Contact Us
           </a>
