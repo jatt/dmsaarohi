@@ -6,6 +6,7 @@ async function createContactSubmission(payload) {
     name: payload.name,
     email: payload.email,
     phone: payload.phone,
+    source: payload.source,
     subject: payload.subject,
     message: payload.message
   });

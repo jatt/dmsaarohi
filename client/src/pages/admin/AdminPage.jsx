@@ -685,6 +685,7 @@ function AdminPage() {
                         "all-submissions.csv",
                         [
                           { key: "formType", label: "Type" },
+                          { key: "source", label: "Source" },
                           { key: "name", label: "Name" },
                           { key: "email", label: "Email" },
                           { key: "phone", label: "Phone" },
@@ -704,6 +705,7 @@ function AdminPage() {
                   <thead className="bg-stone-100 text-left">
                     <tr>
                       <th className="px-3 py-2">Type</th>
+                      <th className="px-3 py-2">Source</th>
                       <th className="px-3 py-2">Name</th>
                       <th className="px-3 py-2">Contact</th>
                       <th className="px-3 py-2">City</th>
@@ -713,7 +715,7 @@ function AdminPage() {
                   <tbody>
                     {reports.all.length === 0 ? (
                       <tr>
-                        <td className="px-3 py-3 text-center text-stone-500" colSpan={5}>
+                        <td className="px-3 py-3 text-center text-stone-500" colSpan={6}>
                           No submissions yet.
                         </td>
                       </tr>
@@ -721,6 +723,7 @@ function AdminPage() {
                       reports.all.map((item) => (
                         <tr key={item._id} className="border-t border-stone-100">
                           <td className="px-3 py-2 uppercase text-xs font-semibold text-stone-600">{item.formType}</td>
+                          <td className="px-3 py-2 text-xs text-stone-600">{item.source || "-"}</td>
                           <td className="px-3 py-2">
                             <div className="font-semibold">{item.name}</div>
                             {item.stageName ? <div className="text-xs text-stone-500">Stage: {item.stageName}</div> : null}
