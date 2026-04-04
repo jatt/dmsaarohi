@@ -3,7 +3,11 @@ import { useLocation } from "react-router-dom";
 function Footer() {
   const currentYear = new Date().getFullYear();
   const location = useLocation();
+<<<<<<< HEAD
   const isMusic = location.pathname.startsWith("/music-society") || location.pathname.startsWith("/music");
+=======
+  const isMusic = location.pathname.startsWith("/music-society");
+>>>>>>> 0fbe1c591998a809391d786001017402cd9ef760
   const isNgo = location.pathname.startsWith("/ngo");
 
   return (
@@ -45,6 +49,8 @@ function Footer() {
           <ul className="space-y-1 text-xs">
             <li><a href="/" className="text-stone-300 hover:text-emerald-300 transition">Home</a></li>
             <li><a href="/music" className="text-stone-300 hover:text-emerald-300 transition">Music Society</a></li>
+            <li><a href="/home" className="text-stone-300 hover:text-emerald-300 transition">Home</a></li>
+            <li><a href="/music-society" className="text-stone-300 hover:text-emerald-300 transition">Music Society</a></li>
             <li><a href="/ngo" className="text-stone-300 hover:text-emerald-300 transition">NGO</a></li>
           </ul>
         </div>

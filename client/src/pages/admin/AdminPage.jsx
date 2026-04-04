@@ -700,6 +700,7 @@ function AdminPage() {
                   </button>
                 </div>
               </div>
+<<<<<<< HEAD
               <div className="max-h-[360px] overflow-auto">
                 <table className="min-w-full text-sm text-stone-800">
                   <thead className="bg-stone-100 text-left">
@@ -742,6 +743,48 @@ function AdminPage() {
                     )}
                   </tbody>
                 </table>
+=======
+              <div className="max-h-[360px] overflow-auto">
+                <table className="min-w-full text-sm text-stone-800">
+                  <thead className="bg-stone-100 text-left">
+                    <tr>
+                      <th className="px-3 py-2">Type</th>
+                      <th className="px-3 py-2">Name</th>
+                      <th className="px-3 py-2">Contact</th>
+                      <th className="px-3 py-2">City</th>
+                      <th className="px-3 py-2">Created</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {reports.all.length === 0 ? (
+                      <tr>
+                        <td className="px-3 py-3 text-center text-stone-500" colSpan={5}>
+                          No submissions yet.
+                        </td>
+                      </tr>
+                    ) : (
+                      reports.all.map((item) => (
+                        <tr key={item._id} className="border-t border-stone-100">
+                          <td className="px-3 py-2 uppercase text-xs font-semibold text-stone-600">{item.formType}</td>
+                          <td className="px-3 py-2">
+                            <div className="font-semibold">{item.name}</div>
+                            {item.stageName ? <div className="text-xs text-stone-500">Stage: {item.stageName}</div> : null}
+                          </td>
+                          <td className="px-3 py-2 text-xs text-stone-700">
+                            {item.email}
+                            <br />
+                            {item.phone}
+                          </td>
+                          <td className="px-3 py-2">{item.city}</td>
+                          <td className="px-3 py-2 text-xs text-stone-600">
+                            {item.createdAt ? item.createdAt.slice(0, 10) : ""}
+                          </td>
+                        </tr>
+                      ))
+                    )}
+                  </tbody>
+                </table>
+>>>>>>> 0fbe1c591998a809391d786001017402cd9ef760
               </div>
             </div>
 
