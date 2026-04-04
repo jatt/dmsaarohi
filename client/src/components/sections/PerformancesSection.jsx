@@ -1,8 +1,8 @@
 function PerformancesSection() {
   const videos = [
-    { title: "Live Performance 1", url: "https://www.youtube.com/embed/Wp5nRq0UdpU?si=wsb0xpEwD0S_hoNd" },
-    { title: "Live Performance 2", url: "https://www.youtube.com/embed/RCOXwxmZ9ik?si=KQj8eTU7dOPZJp07" },
-    { title: "Live Performance 3", url: "https://www.youtube.com/embed/F14ZS93PEB0?si=oagB3bdZWtPbcpnA" }
+    { title: "Live Performance 1", url: "https://www.youtube.com/embed/Wp5nRq0UdpU?si=wsb0xpEwD0S_hoNd", channelUrl: "https://www.youtube.com/@dmsaarohi" },
+    { title: "Live Performance 2", url: "https://www.youtube.com/embed/RCOXwxmZ9ik?si=KQj8eTU7dOPZJp07", channelUrl: "https://www.youtube.com/@dmsaarohi" },
+    { title: "Live Performance 3", url: "https://www.youtube.com/embed/F14ZS93PEB0?si=oagB3bdZWtPbcpnA", channelUrl: "https://www.youtube.com/@dmsaarohi" }
   ];
 
   return (
@@ -27,6 +27,16 @@ function PerformancesSection() {
               />
             </div>
           </div>
+          
+          {/* Subscribe Button */}
+          <a
+            href={item.channelUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="mt-4 block w-full rounded-lg bg-gradient-to-r from-orange-700 to-amber-600 px-4 py-2.5 text-center text-sm font-semibold text-white transition hover:from-orange-600 hover:to-amber-500 active:scale-95"
+          >
+            🔔 Subscribe Us
+          </a>
         </article>
       ))}
     </section>

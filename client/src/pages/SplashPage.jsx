@@ -52,57 +52,101 @@ function SplashPage() {
           </div>
         </div>
       ) : (
-        <div className="relative grid min-h-screen place-items-center px-6 py-10">
+        <div className="relative flex min-h-screen flex-col items-center justify-center px-4 py-12 sm:px-6 lg:px-8">
           <div className="absolute inset-0 opacity-60 [background-image:linear-gradient(rgba(0,0,0,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(0,0,0,0.04)_1px,transparent_1px)] [background-size:68px_68px]" />
-          <div className="relative grid w-full max-w-5xl gap-6 md:grid-cols-[1fr_1fr]">
+          
+          {/* Header Section */}
+          <div className="relative mb-8 w-full max-w-2xl text-center sm:mb-12">
+            <h1 className="text-3xl font-bold text-stone-900 sm:text-4xl md:text-5xl">
+              Welcome to DMS Aarohi
+            </h1>
+            <p className="mt-3 text-base text-stone-600 sm:text-lg md:mt-4">
+              Select which platform you'd like to explore
+            </p>
+          </div>
+
+          {/* Cards Grid */}
+          <div className="relative grid w-full max-w-4xl gap-6 sm:gap-8 md:grid-cols-2">
+            {/* Music Society Card */}
             <Link
               to="/music-society"
-              className="group flex min-h-[230px] flex-col justify-between overflow-hidden rounded-[1.8rem] border border-emerald-200/60 bg-gradient-to-br from-emerald-900 via-emerald-800 to-emerald-700 p-7 text-white shadow-[0_22px_70px_rgba(16,185,129,0.25)] transition duration-200 hover:-translate-y-1 hover:shadow-[0_28px_90px_rgba(16,185,129,0.35)]"
+              className="group flex flex-col overflow-hidden rounded-2xl border border-emerald-200/60 bg-gradient-to-br from-emerald-900 via-emerald-800 to-emerald-700 p-8 text-white shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-105 sm:rounded-3xl sm:p-10 md:min-h-[320px]"
             >
-              <div className="absolute -right-10 -top-10 h-32 w-32 rounded-full bg-white/10 blur-3xl" />
-              <div className="absolute bottom-0 right-0 h-24 w-24 rounded-full bg-emerald-300/20 blur-2xl" />
-              <div className="relative flex items-start justify-between">
+              {/* Decorative blobs */}
+              <div className="absolute -right-12 -top-12 h-40 w-40 rounded-full bg-white/10 blur-3xl transition-all duration-500 group-hover:h-52 group-hover:w-52" />
+              <div className="absolute bottom-0 right-0 h-28 w-28 rounded-full bg-emerald-300/20 blur-2xl" />
+              
+              {/* Content */}
+              <div className="relative flex flex-1 flex-col justify-between">
                 <div>
-                  <p className="text-[11px] uppercase tracking-[0.34em] text-emerald-200/90">Music Society</p>
-                  <h2 className="mt-3 font-serif text-3xl leading-snug">Enter</h2>
+                  {/* Icon/Badge */}
+                  <div className="mb-4 inline-flex items-center rounded-lg bg-emerald-600/40 px-4 py-2 backdrop-blur-sm">
+                    <span className="text-xs font-semibold uppercase tracking-widest text-emerald-200">🎵 Music Society</span>
+                  </div>
+                  
+                  {/* Title */}
+                  <h2 className="mt-4 font-serif text-4xl font-bold leading-tight sm:text-5xl">
+                    Celebrate
+                  </h2>
+                  
+                  {/* Description */}
+                  <p className="mt-4 text-sm leading-relaxed text-emerald-50/90 sm:text-base">
+                    Explore our world of music, performances, and talent showcases. Join our community of artists and music enthusiasts.
+                  </p>
                 </div>
-                <div className="rounded-full border border-white/20 bg-white/15 px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-emerald-50">
-                  Live
+
+                {/* Footer */}
+                <div className="relative mt-8 flex items-center justify-between border-t border-white/10 pt-6">
+                  <span className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-100">
+                    Enter the stage <span aria-hidden="true" className="transition group-hover:translate-x-1">→</span>
+                  </span>
                 </div>
-              </div>
-              <div className="relative mt-6 flex items-center justify-between text-sm text-emerald-50">
-                <span className="inline-flex items-center gap-2 font-semibold">
-                  Tap to continue <span aria-hidden="true">→</span>
-                </span>
-                <span className="rounded-full bg-white/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.24em]">
-                  Stage
-                </span>
               </div>
             </Link>
+
+            {/* NGO Card */}
             <Link
               to="/ngo"
-              className="group flex min-h-[230px] flex-col justify-between overflow-hidden rounded-[1.8rem] border border-amber-200/60 bg-gradient-to-br from-amber-900 via-orange-700 to-orange-600 p-7 text-white shadow-[0_22px_70px_rgba(251,146,60,0.28)] transition duration-200 hover:-translate-y-1 hover:shadow-[0_28px_90px_rgba(251,146,60,0.38)]"
+              className="group flex flex-col overflow-hidden rounded-2xl border border-amber-200/60 bg-gradient-to-br from-orange-900 via-orange-800 to-orange-700 p-8 text-white shadow-lg transition-all duration-300 hover:shadow-2xl hover:scale-105 sm:rounded-3xl sm:p-10 md:min-h-[320px]"
             >
-              <div className="absolute -left-6 -top-8 h-28 w-28 rounded-full bg-white/10 blur-2xl" />
-              <div className="absolute bottom-0 left-2 h-28 w-28 rounded-full bg-amber-300/22 blur-2xl" />
-              <div className="relative flex items-start justify-between">
+              {/* Decorative blobs */}
+              <div className="absolute -left-12 -top-12 h-40 w-40 rounded-full bg-white/10 blur-3xl transition-all duration-500 group-hover:h-52 group-hover:w-52" />
+              <div className="absolute bottom-0 left-0 h-28 w-28 rounded-full bg-amber-300/20 blur-2xl" />
+              
+              {/* Content */}
+              <div className="relative flex flex-1 flex-col justify-between">
                 <div>
-                  <p className="text-[11px] uppercase tracking-[0.34em] text-amber-100/90">NGO</p>
-                  <h2 className="mt-3 font-serif text-3xl leading-snug">Enter</h2>
+                  {/* Icon/Badge */}
+                  <div className="mb-4 inline-flex items-center rounded-lg bg-orange-600/40 px-4 py-2 backdrop-blur-sm">
+                    <span className="text-xs font-semibold uppercase tracking-widest text-amber-200">🤝 NGO Initiative</span>
+                  </div>
+                  
+                  {/* Title */}
+                  <h2 className="mt-4 font-serif text-4xl font-bold leading-tight sm:text-5xl">
+                    Make Impact
+                  </h2>
+                  
+                  {/* Description */}
+                  <p className="mt-4 text-sm leading-relaxed text-amber-50/90 sm:text-base">
+                    Discover our services, activities, and social initiatives. Be part of our mission to create positive change.
+                  </p>
                 </div>
-                <div className="rounded-full border border-white/20 bg-white/15 px-3 py-1 text-xs font-semibold uppercase tracking-[0.24em] text-amber-50">
-                  Care
+
+                {/* Footer */}
+                <div className="relative mt-8 flex items-center justify-between border-t border-white/10 pt-6">
+                  <span className="inline-flex items-center gap-2 text-sm font-semibold text-amber-100">
+                    Explore mission <span aria-hidden="true" className="transition group-hover:translate-x-1">→</span>
+                  </span>
                 </div>
-              </div>
-              <div className="relative mt-6 flex items-center justify-between text-sm text-amber-50">
-                <span className="inline-flex items-center gap-2 font-semibold">
-                  Tap to continue <span aria-hidden="true">→</span>
-                </span>
-                <span className="rounded-full bg-white/15 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.24em]">
-                  Impact
-                </span>
               </div>
             </Link>
+          </div>
+
+          {/* Bottom Info */}
+          <div className="relative mt-12 text-center">
+            <p className="text-xs text-stone-500 sm:text-sm">
+              Choose your path • Seamless experience across all devices
+            </p>
           </div>
         </div>
       )}

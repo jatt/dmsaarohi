@@ -1,51 +1,39 @@
 const services = [
   {
-    id: "edu-india",
-    title: "Bridge Schooling (Rural India)",
-    raised: 320000,
-    goal: 1200000,
-    description: "Evening learning pods with books, uniforms, and tutors for government-school children in villages.",
-    image: "/legacy/bd1.jpg"
-  },
-  {
-    id: "music-therapy",
-    title: "Music Therapy Camps",
-    raised: 145000,
+    id: "blood-donation",
+    title: "Blood Donation Camps",
+    raised: 325000,
     goal: 800000,
-    description: "Certified music therapists and counselors supporting children in relief shelters and low-income wards.",
-    image: "/legacy/bd2.jpg"
+    description: "Regular blood donation camps organized in partnership with medical centers to support emergency needs and ensure adequate blood supply for underprivileged patients.",
+    image: "/legacy/bd2.jpg",
+    icon: "🩸"
   },
   {
-    id: "food-relief",
-    title: "Community Food Relief",
-    raised: 510000,
-    goal: 1500000,
-    description: "Weekly nutrition kits (rice, dal, oil) for urban bastis and migrant families, coordinated with local SHGs.",
-    image: "/legacy/bd3.jpg"
-  },
-  {
-    id: "skills-lab",
-    title: "Youth Skills Lab",
+    id: "clothes-donation",
+    title: "Clothes & Essentials",
     raised: 210000,
-    goal: 900000,
-    description: "After-school digital + music production labs for Class 9-12 students, mentored by working professionals.",
-    image: "/legacy/bd4.jpg"
+    goal: 600000,
+    description: "Collecting and distributing new and gently used clothing, winter wear, and essential items to homeless and low-income families during changing seasons.",
+    image: "/legacy/bd3.jpg",
+    icon: "👕"
   },
   {
-    id: "health-camp",
-    title: "Mobile Health Camps",
-    raised: 185000,
-    goal: 750000,
-    description: "Monthly basic health + hemoglobin camps in resettlement colonies, using music circles for child engagement.",
-    image: "/legacy/image1.jpeg"
+    id: "food-donation",
+    title: "Food Donation Drive",
+    raised: 510000,
+    goal: 1200000,
+    description: "Weekly nutrition kits including rice, pulses, oil, and dry rations distributed to urban slums and migrant families to combat hunger and malnutrition.",
+    image: "/legacy/bd4.jpg",
+    icon: "🍲"
   },
   {
-    id: "scholarship",
-    title: "Scholarships for Artists",
-    raised: 275000,
+    id: "free-education",
+    title: "Free Education Program",
+    raised: 420000,
     goal: 1000000,
-    description: "Sponsor instruments, tuition, and travel for promising Indian artists from low-income backgrounds.",
-    image: "/legacy/patrons.jpg"
+    description: "Evening learning centers with qualified tutors providing free education, books, uniforms, and scholarships to underprivileged children in rural and urban areas.",
+    image: "/legacy/bd1.jpg",
+    icon: "📚"
   }
 ];
 
@@ -71,7 +59,7 @@ function ServicesSection() {
         </a>
       </div>
 
-      <div className="mt-7 grid gap-4 sm:gap-5 md:grid-cols-2 xl:grid-cols-3">
+      <div className="mt-7 grid gap-4 sm:gap-5 md:grid-cols-2">
         {services.map((item) => (
           <article
             key={item.id}
@@ -85,7 +73,8 @@ function ServicesSection() {
                 loading="lazy"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/45 via-black/10 to-transparent" />
-              <div className="absolute left-3 top-3 rounded-full bg-amber-800 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-white shadow">
+              <div className="absolute left-3 top-3 flex items-center gap-2 rounded-full bg-amber-800 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.22em] text-white shadow">
+                <span>{item.icon}</span>
                 Active
               </div>
               <div className="absolute right-3 bottom-3 rounded-full bg-white/90 px-3 py-1 text-[11px] font-semibold uppercase tracking-[0.18em] text-amber-800 shadow">
